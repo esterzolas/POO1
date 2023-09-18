@@ -375,6 +375,16 @@ public class principal {
 
     }
 
+    public static int contaOcorrencias(int n, int[] vet){
+        int nOcorrencias = 0;
+        for (int i = 0; i < 10; i++){
+            if (n == vet[i]){
+                nOcorrencias++;
+            }
+        }
+        return nOcorrencias;
+    }
+
     public static void ex14() {
         Scanner sc = new Scanner(System.in);
         int[] vet = new int[10];
@@ -403,7 +413,7 @@ public class principal {
 
         System.out.println("Valores repetidos:");
         for (int i = 0; i < nRep; i++){
-            System.out.printf("%d aparece %d vezes\n",vetRep[i],contaOcorrencias(vetRep[i],vet));
+            System.out.printf("%d aparece %d vezes\n",vetRep[i], contaOcorrencias(vetRep[i],vet));
         }
         
         sc.close();
