@@ -28,6 +28,8 @@ public class principal {
         System.out.println("Os valores lidos são:");
         System.out.printf("%d %d %d %d %d %d ", val1, val2, val3, val4, val5, val6);
 
+        sc.close();
+
     }
 
     public static void ex02(){
@@ -44,16 +46,22 @@ public class principal {
         for (int i = 0; i < 6; i++){
             System.out.printf("%d ",vet[i]);
         }
+
+        sc.close();
     }
 
     public static void ex03() {
         Scanner sc = new Scanner(System.in);
         // ....
+
+        sc.close();
     }
 
     public static void main(String[] args) {
         // ex01();
         ex02();
+
+
     }
 
 
