@@ -103,6 +103,7 @@ public class principal {
         for (int i = 0; i < 5; i++){
             System.out.printf("%d ",vet[i]);
         }
+        //erro maior e menor
         System.out.printf("\nO maior valor é: %d, localizado na posição %d do vetor\n",maior,maior);
         System.out.printf("O menor valor é: %d, localizado na posição %d do vetor\n",menor,menor);
         System.out.printf("A média é: %.1f\n",media/5);
@@ -278,6 +279,7 @@ public class principal {
 
         System.out.println("Probabilidades");
         for (int i = 0; i < 4; i++){
+            //casa decimal errada
             System.out.printf("%.1f%%\n",prob[i]);
         }
         
@@ -332,7 +334,7 @@ public class principal {
     
             System.out.println("==== Alunos Cadastrados ====");
             for (int i = 0; i < nAlunos; i++){
-                System.out.printf("Número: %d Classe Social: %c CRA: %.2f\n",matricula[i],classe[i],cra[i]);
+                System.out.printf("Número: %d | Classe Social: %c | CRA: %.2f\n",matricula[i],classe[i],cra[i]);
             }
         }
         
@@ -366,6 +368,7 @@ public class principal {
             }
         }
 
+        //printou um numero que nao se repetiu (4 do teste)
         System.out.println("Valores repetidos:");
         for (int i = 0; i < nRep; i++){
             System.out.printf("%d ",vetRep[i]);
@@ -377,7 +380,7 @@ public class principal {
 
     public static int contaOcorrencias(int n, int[] vet){
         int nOcorrencias = 0;
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 8; i++){
             if (n == vet[i]){
                 nOcorrencias++;
             }
@@ -387,18 +390,18 @@ public class principal {
 
     public static void ex14() {
         Scanner sc = new Scanner(System.in);
-        int[] vet = new int[10];
-        int[] vetRep = new int[10];
+        int[] vet = new int[8];
+        int[] vetRep = new int[8];
         int nRep = 0;
         boolean rep = false;
         System.out.println("<< Valores iguais >>");
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 8; i++){
             System.out.printf("Digite o valor %d:\n",i+1);
             vet[i] = sc.nextInt();
         }
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 8; i++){
             rep = false;
             for (int j = 0; j < nRep; j++){
                 if (vet[i] == vetRep[j]){
