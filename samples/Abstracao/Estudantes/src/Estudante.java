@@ -31,5 +31,4 @@ public abstract class Estudante {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-
 }
