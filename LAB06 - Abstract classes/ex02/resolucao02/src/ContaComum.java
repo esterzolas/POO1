@@ -1,9 +1,10 @@
 public class ContaComum extends ContaCorrente {
-    public ContaComum(float val, int num, int pwd) {
+    
+    public ContaComum(double val, int num, int pwd) {
         super(val, num, pwd);
     }
 
-    public boolean debitaValor(float val, int pwd) {
+    public boolean debitaValor(double val, int pwd) {
         if (isSenha(pwd)) {
             if (val <= 0) {
                 return false; // valor deve ser positivo
@@ -21,13 +22,13 @@ public class ContaComum extends ContaCorrente {
         return false; // senha incorreta
     }
 
-    public void creditaValor(int pwd, float val) {
+    public void creditaValor(int pwd, double val) {
         if (isSenha(pwd)) {
             saldo += val;
         }
     }
 
-    public float getSaldo(int pwd) {
+    public double getSaldo(int pwd) {
         if (isSenha(pwd)) {
             return saldo;
         }
@@ -49,5 +50,13 @@ public class ContaComum extends ContaCorrente {
 
     protected boolean isSenha(int pwd) {
         return senha == pwd;
+    }
+
+    public void mostrarConta(int pwd) {
+        System.out.println("Conta Comum");
+        System.out.println("Número da conta: " + numConta);
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Estado: " + estado);
+        System.out.println();
     }
 }

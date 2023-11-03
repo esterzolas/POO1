@@ -1,20 +1,21 @@
 public abstract class ContaCorrente {
-    private float saldo;
-    private int numConta;
-    private int senha;
-    private int estado;
+    protected double saldo;
+    protected int numConta;
+    protected int senha;
+    protected int estado;
 
-    public ContaCorrente(float val, int num, int pwd) {
-        saldo = val;
-        numConta = num;
-        senha = pwd;
-        estado = 1; // 1 = conta ativa
+    public ContaCorrente(double val, int num, int pwd) {
+        this.saldo = val;
+        this.numConta = num;
+        this.senha = pwd;
+        this.estado = 1; // 1 = conta ativa
     }
 
-    public abstract boolean debitaValor(float val, int pwd);
-    public abstract void creditaValor(int pwd, float val);
-    public abstract float getSaldo(int pwd);
+    public abstract boolean debitaValor(double val, int pwd);
+    public abstract void creditaValor(int pwd, double val);
+    public abstract double getSaldo(int pwd);
     protected abstract int getEstado(int pwd);
     protected abstract void setEstado(int pwd, int estado);
     protected abstract boolean isSenha(int pwd);
+    public abstract void mostrarConta(int pwd);
 }
