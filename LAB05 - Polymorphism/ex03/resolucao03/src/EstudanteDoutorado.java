@@ -11,7 +11,6 @@ public class EstudanteDoutorado extends EstudantePosGrad {
         System.out.println("EstudanteDoutorado {" + "tituloTese: " + tituloTese + '\'' + '}');
     }
 
-
     public void print(boolean opcao) {
         super.print();
         if (opcao == true) {
