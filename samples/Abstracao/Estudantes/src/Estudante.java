@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public abstract class Estudante {
     private String nome;
     private String endereco;
@@ -10,6 +12,7 @@ public abstract class Estudante {
     public abstract double calc_cr(boolean incluiReprovacao) throws Exception;
 
     public void print() {
+        System.out.println();
         System.out.println("Estudante{" +
                 "nome='" + nome + '\'' +
                 ", endereco='" + endereco + '\'' +
@@ -31,4 +34,10 @@ public abstract class Estudante {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 51a1b52d99943f3ca36b0745ad60c21ac397e40b
 }
